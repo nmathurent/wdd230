@@ -1,0 +1,22 @@
+/* HTML Selectors */
+body {
+    font-family: 'Kalam';
+}
+
+div {
+    margin: 10px;
+    text-align: center;
+}
+
+/* background container */
+#background {
+    height: 200px;
+    background-color: #3377aa;
+}
+
+footer {
+    background-color: #3377aa;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
