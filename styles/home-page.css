@@ -3,6 +3,7 @@ body {
     font-family: 'Kalam';
 }
 
+
 div {
     margin: 10px;
     text-align: center;
@@ -12,6 +13,11 @@ div {
 #background {
     height: 300px;
     background-color: #3377aa;
+    color: white;
+}
+
+#lastupdated {
+    color: yellow;
 }
 
 footer {
