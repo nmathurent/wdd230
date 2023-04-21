@@ -9,4 +9,4 @@ document.querySelector('#year').textContent = currentYear;
 
 // Determining date and time of when the current document was last modified
 let oLastModif = new Date(document.lastModified);
-document.querySelector('#lastupdated').textContent = `Last Updated: ${oLastModif.toLocaleString()}`;
+document.querySelector('#lastupdated').textContent = `Last Updated: ${oLastModif.toLocaleString().replace(',', '')}`;
