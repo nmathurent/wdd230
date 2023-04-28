@@ -1,6 +1,5 @@
 /* HTML Selectors */
 body {
-    /*font-family: 'Kalam';*/
     font-family: 'Petrona', serif;
 }
 
@@ -15,12 +14,11 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.container {
+header {
     height: 280px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center; 
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
     padding-left: 40px;
 }
  
@@ -30,8 +28,6 @@ h2 {
 }
 
 img {
-     /*max-width: 100%;
-     max-height:100%;*/
      width: 200px;
      height: auto;
 }
@@ -50,7 +46,7 @@ img {
     color: yellow;
 }
 
-.container, footer {
+header, footer {
     background-color: #3377aa;
     color: white;
     margin-left: 10px;
