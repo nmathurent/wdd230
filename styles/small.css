@@ -19,7 +19,7 @@ h2 {
     height: 280px;
     display: grid;
     align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 5px;
     padding-left: 40px;
 }
@@ -36,10 +36,6 @@ img {
      height: auto;
 }
    
-.text {
-    font-size: 20px;
-}
-
 .bottomtext {
     margin-top: 0;
 }
