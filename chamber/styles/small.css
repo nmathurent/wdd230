@@ -103,7 +103,7 @@ main .spotlight{
 
 }
 
-main section:nth-child(2) {
+main section.section2 {
     display: none;
 }
 

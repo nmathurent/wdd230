@@ -16,8 +16,12 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    main section:nth-child(2) {
+    main section.section2 {
         display: block;
+    }
+
+    main section.spotlight3 {
+        display: none;
     }
 
     header, footer {
