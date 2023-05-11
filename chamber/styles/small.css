@@ -20,11 +20,7 @@ header {
     align-items: center; 
 }
 
-nav {
-    background-color: #05276f;
-    text-align: center;
-}
-
+/*
 nav a {
     display: block;
     color: #fff;
@@ -33,7 +29,56 @@ nav a {
     padding: 0.75rem;
     font-size: 0.95rem;
 }
- 
+*/
+
+nav {
+    /*background-color: #05276f;*/
+}
+
+nav button {
+    margin: .2rem 2vw;
+    background: transparent;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2vw;
+    text-decoration: none;
+    color: #fff;
+    border-top: 1px solid rgba(0,0,0,0.5);
+    background-color: yellowgreen;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li.active a {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff
+}
+
+nav ul li a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+nav ul {display: none;}
+nav ul.open {display: block;}
+
+#hamburguerBtn span:nth-child(1) {display: block;}
+#hamburguerBtn span:nth-child(2) {display: none;}
+
+#hamburguerBtn.open span:nth-child(1) {display: none;}
+#hamburguerBtn.open span:nth-child(2) {display: block;}
+
 main section{
     margin: 0.5rem;
     border: 1px solid #bbb;
