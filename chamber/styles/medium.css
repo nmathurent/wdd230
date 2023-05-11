@@ -20,12 +20,33 @@
         display: block;
     }
 
-    main section.spotlight3 {
-        display: none;
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
-    header, footer {
-        border-radius: 25px;
+    .footerSection1 {                                           /* Footer section 1 */
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+        display: inline-flex;
+    }
+
+    .footerSection2 {                                           /* Footer section 2 */
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+        display: inline-flex;
+        
+    }
+
+    #footerfield1, #footerfield2, #footerfield3 {
+        border-right: 1px solid;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .footerSection3 {                                           /* Footer section 3 */
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
     }
 
     .section1 {                                           /* Hero section */
