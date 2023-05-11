@@ -78,3 +78,14 @@ footer {
 .footerspacing {
     margin: 0;
 }
+
+header .social img {
+    height: 50px;
+    width: 50px;
+}
+
+.todaybanner {
+    background-color: yellowgreen;
+    width: 100%;
+    text-align: center;
+}
