@@ -89,7 +89,7 @@ main section{
     margin: 0.5rem;
     border: 1px solid #bbb;
     background-color: #eee;
-    height: 200px;
+    height: auto;
 }
 
 main .spotlight{

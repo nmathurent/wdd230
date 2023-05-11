@@ -15,36 +15,38 @@
         border-right: 1px solid rgba(0,0,0,0.3);
     }
 
-   /* main {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    } */
-    .section1 {                                           /* Hero section */
-        grid-column: 1 / 5;
-        grid-row: 1 / 2;
-    }
-
-    .section5 {                                           /* New Releasesection */
-        grid-column: 1 / 5;
-        grid-row: 2 / 3;
-    }
-
-    .section6 {                                           /* Spotlight section */
-        grid-column: 1 / 5;
-        grid-row: 3 / 4;
-    }
-
-    .section2 {                                           /* Join section */
-        grid-column: 1 / 5;
-        grid-row: 4 / 5;
+    main .spotlight{
+        grid-template-columns: 1fr;
     }
 
     .section3 {                                           /* Event section */
-        grid-column: 1 / 4;
-        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .section1 {                                           /* Hero section */
+        grid-area: 1 / 2 / span 2 / span 2;
     }
 
     .section4 {                                           /* Weather section */
-        grid-column: 4 / 5;
-        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
     }
+
+    .section2 {                                           /* Join section */
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .section5 {                                           /* New Release section */
+        grid-area: 3 / 2 / 4 / 4;
+    }
+
+    .section6 {                                           /* Spotlight section */
+        grid-area: 1 / 4 / 4 / 5;
+    } 
+
+
+
+
 }
