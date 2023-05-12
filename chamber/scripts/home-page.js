@@ -13,6 +13,7 @@ document.querySelector('#year').textContent = currentYear;
 // Determining date and time of when the current document was last modified
 let oLastModif = new Date(document.lastModified);
 document.querySelector('#lastupdated').textContent = `Last Updated: ${oLastModif.toLocaleString().replace(',', '')}`;
+document.querySelector('#lastupdated2').textContent = `Last Updated: ${oLastModif.toLocaleString().replace(',', '')}`;
 
 const days = [
     "Sunday",
