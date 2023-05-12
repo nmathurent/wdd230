@@ -15,6 +15,11 @@
         border-right: 1px solid rgba(0,0,0,0.3);
     }
 
+    main {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
     main .spotlight{
         grid-template-columns: 1fr;
     }
@@ -51,14 +56,14 @@
     } 
 
     .footerSection2 {                                           /* Footer section 2 */
-        grid-column: 1 / 4; 
+        grid-column: 1; 
         grid-row: 2 / 3;
         display: inline-flex;
         text-align: left;
         
     }
     .footerSection3 {                                           /* Footer section 3 */
-        grid-column: 4 / 5; 
+        grid-column: 4; 
         grid-row: 2 / 3;
         display: inline-flex;
         text-align: left;
@@ -68,7 +73,7 @@
 
     .social {
             position: absolute;
-            top: 55px; 
+            top: 45px; 
             right: 30px;
     }
 
