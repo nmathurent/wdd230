@@ -12,13 +12,13 @@ header {
     font-size: .75rem;
 }
 
-header h1 {
+h1 {
     
     font-size: 1.5rem;
     margin: 0.15rem;
 }
 
-header h2 {
+h2 {
     font-size: .90rem;
 }
 
@@ -143,10 +143,19 @@ header, footer {
 
 footer {
     padding: 5px;
+    font-size: .75rem;
     text-align: center;
 
 }
 
+#footerfield4 {
+    display: none;
+}
+
+.footerSection3 {
+    margin-top: 20px;
+    border-top: 1px solid;
+ }
 
 .footerspacing {
     margin: 0;
