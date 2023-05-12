@@ -8,8 +8,15 @@
         font-size: 1.5rem;
     }
 
+    header .social img {
+        height: 40%;
+        width:  40%;
+    }
+
     main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px;
+        gap: 5px;
     }
 
     main .spotlight{
@@ -35,7 +42,6 @@
         grid-column: 1 / 5;
         grid-row: 2 / 3;
         display: inline-flex;
-        
     }
 
     #footerfield1, #footerfield2, #footerfield3 {
@@ -47,6 +53,7 @@
     .footerSection3 {                                           /* Footer section 3 */
         grid-column: 1 / 5;
         grid-row: 3 / 4;
+
     }
 
     .section1 {                                           /* Hero section */

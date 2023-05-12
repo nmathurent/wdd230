@@ -5,8 +5,12 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0.15rem;
+}
+
+h2 {
+    font-size: .75rem;
 }
 
 p {
@@ -14,26 +18,13 @@ p {
 }
 
 header {
-    height: 280px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center; 
 }
 
-/*
-nav a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    padding: 0.75rem;
-    font-size: 0.95rem;
-}
-*/
 
-nav {
-    /*background-color: #05276f;*/
-}
 
 nav button {
     margin: .2rem 2vw;
@@ -44,6 +35,8 @@ nav button {
     width: 50px;
     height: 50px;
 }
+
+
 
 nav ul li a {
     display: block;
@@ -72,6 +65,7 @@ nav ul li a:hover {
 
 nav ul {display: none;}
 nav ul.open {display: block;}
+
 
 #hamburguerBtn span:nth-child(1) {display: block;}
 #hamburguerBtn span:nth-child(2) {display: none;}
@@ -149,8 +143,8 @@ footer {
 }
 
 header .social img {
-    height: 50px;
-    width: 50px;
+    height: 25%;
+    width:  25%;
 }
 
 .todaybanner {
