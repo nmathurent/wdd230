@@ -121,6 +121,10 @@ img {
      width: 200px;
      height: auto;
 }
+
+.roundImage {
+    border-radius: 50%;
+  }
    
 #lastupdated {
 
