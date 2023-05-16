@@ -16,7 +16,7 @@ const listElement = document.querySelector('ul');
 const inputElement = document.querySelector('input');
 const buttonElement = document.querySelector('button');
 
-document.getElementById("myContainer").style.border = "none";
+document.getElementById("secondContainer").style.border = "none";
 
 buttonElement.addEventListener('click', () => {
   const myItem = inputElement.value;
@@ -24,7 +24,7 @@ buttonElement.addEventListener('click', () => {
   inputElement.placeholder= '';
 
   if (myItem != '') {
-    document.getElementById("myContainer").style.border = "1px solid gray";
+    document.getElementById("secondContainer").style.border = "1px solid gray";
     const listItem = document.createElement('li');
     const listText = document.createElement('span');
     const listDelBtn = document.createElement('button');
@@ -54,6 +54,6 @@ function countItemsToRemoveBorder(listID){
   var i=0, itemCount =0;
   while(ul.getElementsByTagName('li') [i++]) itemCount++;
   if (itemCount == 0) {
-    document.getElementById("myContainer").style.border = "none";
+    document.getElementById("secondContainer").style.border = "none";
   }
   }
