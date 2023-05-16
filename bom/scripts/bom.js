@@ -15,3 +15,45 @@ document.querySelector('#lastupdated').textContent = `Last Updated: ${oLastModif
 const listElement = document.querySelector('ul');
 const inputElement = document.querySelector('input');
 const buttonElement = document.querySelector('button');
+
+document.getElementById("myContainer").style.border = "none";
+
+buttonElement.addEventListener('click', () => {
+  const myItem = inputElement.value;
+  inputElement.value = '';
+  inputElement.placeholder= '';
+
+  if (myItem != '') {
+    document.getElementById("myContainer").style.border = "1px solid gray";
+    const listItem = document.createElement('li');
+    const listText = document.createElement('span');
+    const listDelBtn = document.createElement('button');
+    const araiLabelValue = "Remove " + myItem;
+    // Accessibility - Creating an aria-label attribute
+    listDelBtn.ariaLabel = araiLabelValue
+    console.log(listDelBtn.ariaLabel);
+
+    listItem.appendChild(listText);
+    listText.textContent = myItem;
+    listItem.appendChild(listDelBtn);
+    listDelBtn.textContent = '❌';
+    listElement.appendChild(listItem);
+
+    listDelBtn.addEventListener('click', () => {
+      listElement.removeChild(listItem);
+      countItemsToRemoveBorder('list')
+    });
+  }
+
+  inputElement.focus();
+
+});
+
+function countItemsToRemoveBorder(listID){
+  var ul = document.getElementById(listID);
+  var i=0, itemCount =0;
+  while(ul.getElementsByTagName('li') [i++]) itemCount++;
+  if (itemCount == 0) {
+    document.getElementById("myContainer").style.border = "none";
+  }
+  }

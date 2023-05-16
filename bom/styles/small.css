@@ -21,7 +21,7 @@ main {
 	margin: 1rem auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 1rem;
-	background-color: #ddd;
+	background-color: #bbeedd;
 	display: flex;
 	flex-direction: column;
 }
@@ -44,6 +44,10 @@ button {
 	gap: 1rem;
 }
 
+/* .chapterList {
+    border: 1px solid gray;
+} */
+
 .list {
 	padding: 0.5rem;
 }
@@ -53,11 +57,14 @@ ul {
 	list-style: none;
 }
 
+
+
 li {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
+
 
 @media only screen and (min-width: 32.5em) {
 	h1 {
