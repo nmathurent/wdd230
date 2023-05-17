@@ -4,9 +4,10 @@ body {
     font-size: 16px;
 }
 
-/* .logo {
-    border-radius: 25%;
-}  */
+.logo {
+    width: 200px;
+    height: auto;
+} 
 
 header {
     font-size: .75rem;
@@ -124,9 +125,40 @@ main section h2 {
     padding-left: 10px;
 }
 
-img {
+/* img {
      width: 100px;
      height: auto;
+} */
+
+.section1 {
+    position: relative;
+}
+
+#hero-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.hero-msg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.hero-button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.join {
+    color: #fff;
+    background-color: yellowgreen;
+    text-decoration: none;
+    /* font-size: 18px; */
+    padding: 15px 30px;
+    border-radius: 5px;
 }
 
 .roundImage {
