@@ -96,8 +96,11 @@ main {
 main section{
     margin: 0.5rem;
     border: 1px solid #bbb;
-    background-color: #eee;
+    /* background-color: #0D9CF2; */
+    background-color: #0B426D;
+    color: white;
     height: auto;
+    text-align: center;
 }
 
 main .spotlight{
@@ -107,7 +110,7 @@ main .spotlight{
     border: 1px solid #bbb;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: #eee;
+    background-color: #105E9B;
 
 }
 
@@ -123,8 +126,13 @@ main section h2 {
     margin-top: 0;
     padding-top: 20px;
     padding-left: 10px;
+    color: #F8F807;
 }
 
+main section a {
+    color: #F8F807; 
+    text-decoration: none;
+}
 /* img {
      width: 100px;
      height: auto;
