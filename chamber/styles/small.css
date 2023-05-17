@@ -142,11 +142,19 @@ main section a {
     position: relative;
 }
 
+.section2 {
+    position: relative;
+}
+
 #hero-img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: cover;
 }
 
+.line {
+    width: 80%;
+}
 
 .hero-msg {
     position: absolute;
@@ -158,6 +166,20 @@ main section a {
     position: absolute;
     bottom: 30px;
     right: 30px;
+}
+
+.join-button {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.join-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
 }
 
 .join {
