@@ -61,7 +61,7 @@ const days = [
   console.log(today);
   if (today === 1 || today === 2) {
     
-     bannerTop.style.display = "none";
+     bannerTop.style.display = "block";
   }
 
     // End Top Banner 

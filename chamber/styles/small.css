@@ -239,5 +239,5 @@ header .social img {
     color: black;
     /* margin: 15px; */
     top: 0px;
-    display: block;
+    display: none;
 }
