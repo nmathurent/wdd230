@@ -91,10 +91,11 @@
             <section class="section4">
                 <h2>Weather</h2>
                 <img id="spotl-img1" src="images/weathericon.png" alt="Photo of the weather logo">
+                <span id="temperature"></span><span"> &#8451</span>
                 <h3>"Partly Cloudy"</h3>
                 <hr class="line">
-                <p>Wind Speed:    2.5 km/h</p>
-                <p>Wind Chill:    N/A</p>
+                <p>Wind Speed:    <span id="kmperhour"></span> km/h</p>
+                <p>Wind Chill:    <span id="windchill"></span></p>
             </section>
             <section class="section5">
                 <h2>New Release</h2>
@@ -159,5 +160,6 @@
             </div>
         </footer>
         <script src="scripts/home-page.js"></script>
+        <script src="scripts/windchill.js"></script>
     </body>
 </html>
