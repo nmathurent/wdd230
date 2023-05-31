@@ -1,0 +1,25 @@
+main  {
+    display: grid;
+    grid-template-columns: 400px;
+    justify-content: center;
+
+}
+
+img {
+    width: 300px;
+    height: 400px;
+    
+  }
+
+main img[data-src] {
+    filter: blur(0.2em);
+    
+    
+  }
+  
+main img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+    border: 1px solid black;
+    padding: 3px;
+  }

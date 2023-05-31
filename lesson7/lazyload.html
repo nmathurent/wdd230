@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nelson MDD230 Lesson 7</title>
+        <link rel="stylesheet" href="styles/lazyloading.css">
+        <meta
+            name="description"
+            content="Website Progressive Loading of Images by Nelson Mathurent in WDD 230: Web 
+                     Frontend Development at Brigham Young University - Idaho." />
+    </head>
+    <body>
+        <main class="grid-container">
+            <h1>Progressive Loading (Images)</h1>
+            <picture>
+                <img src="images/placeholder.png" data-src="http://placekitten.com/300/400" alt="Kitten">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://robohash.org/Test.png/300/400" alt="Robot">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://placekeanu.com/300/400" alt="Keanu photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://picsum.photos/300/400" alt="Picsum photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://www.fillmurray.com/300/400" alt="Fillmurray photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://loremflickr.com/300/400" alt="LoremFlickr photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://placebear.com/300/400" alt="Bear">
+            </picture>
+        </main>
+        <script src="scripts/lazyloading.js"></script>
+    </body>
+</html>
