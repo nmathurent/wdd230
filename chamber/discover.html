@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Irvine Chanmber of Commerce Home Page</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="shortcut icon" href="favicon.ico"
+        <!--<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <meta
+            name="description"
+            content="Chamber Home Page Build by Nelson Mathurent in WDD 230: Web 
+                     Frontend Development at Brigham Young University - Idaho." />
+    </head>
+    <body>
+        <header>
+            <figure>
+                <img  class="logo" src="images/IrvineCoC_logo.webp" alt="Irvine Chamber of Commerce Logo">
+            </figure>
+            <div class="companyname">
+            <h1>Irvine</h1>
+            <h2>Chamber of Commerce</h2>
+            </div>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img class="roundImage" src="images/facebook.png" alt="facebook icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img class="roundImage" src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+            <button id="hamburguerBtn"><span>&#9776;</span><span>X</span></button>
+            <nav>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            
+            <div class="todaybanner">
+                <p><span id="todaydate"></span></p>
+            </div>
+            <div id="meet-banner">
+                <p><span id="monday-tuesday"></span><button id= "bannerbtn" type="submit">❌</button></p>
+            </div>
+            
+        </header>
+        <main class="discoverContainer">
+            <h1>Progressive Loading (Images)</h1>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://placekitten.com/300/400" alt="Kitten">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://robohash.org/Test.png/300/400" alt="Robot">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://placekeanu.com/300/400" alt="Keanu photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://picsum.photos/300/400" alt="Picsum photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://loremflickr.com/300/400" alt="LoremFlickr photos">
+            </picture>
+            <picture>
+                <img src="images/placeholder.png" data-src="https://placebear.com/300/400" alt="Bear">
+            </picture>
+        </main>
+        <footer>
+            
+            <div class="footerSection1">
+                <img class="logo" src="images/IrvineCoC_logo.webp" alt="Irvine Chamber of Commerce Logo">
+                <section class="addresssection">
+                    <h2>Irvine Chamber of Commerce</h2>
+                    <p>1234 Irvine Blvd</p>
+                    <p>Irvine, California 9999</p>
+                </section>
+            </div>
+            <div class="footerSection2">
+                <section class="locationsection">
+                     <p>info@irvinecc.org</p>
+                     <p>+(949) 1234-5678</p>
+                     <p><span>&#128205;</span>Location Map</p>
+                     <p><span>Time between visits:</span><span class="visitDays"></span></p>
+                </section>
+            </div>
+            <div class="footerSection3">
+           
+                <p id="footerfield1">&copy; <span id="year"></span> Irvine Chamber </p>
+                <p id="footerfield2">Nelson Mathurent</p>
+                <p id="footerfield3">WDD 230 Project</p>
+                <p id="footerfield4"><span id="lastupdated"></span></p>
+            </div>
+            <div class="footerSection4">
+                <p class="footerspacing"><span id="lastupdated2"></span></p>
+            </div>
+            
+        </footer>
+        <script src="scripts/home-page.js"></script>
+        <script src="scripts/windchill.js"></script>
+    </body>
+</html>
