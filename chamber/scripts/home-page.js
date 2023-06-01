@@ -74,3 +74,30 @@ function toggleMenu() {
 
 const x = document.getElementById('hamburguerBtn')
 x.onclick = toggleMenu;
+
+
+// Display Time in days between visits
+
+// milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
+const msToDays = 86400000;
+
+const visitsTimeDisp = document.querySelector(".visitDays");
+
+// get the stored value in LocalStorage
+let lastVisitDate = Number(window.localStorage.getItem("lastvisited-date"));
+
+// determine if this is the first visit or calculate the days between visits
+if (lastVisitDate !== 0) {
+  // var day = currentDate.getDate()  - 10;
+  // var newDate = new Date();
+  // newDate.setDate(day);
+  // lastVisitDate = newDate.getTime();
+  let numDays = (Date.now() - lastVisitDate) / msToDays; 
+  visitsTimeDisp.textContent = ` ${numDays.toFixed(0)} days`;
+} else {
+  visitsTimeDisp.textContent = ` first time!`;
+}
+
+// store the last visited date
+lastVisitDate = Date.now();
+localStorage.setItem("lastvisited-date", lastVisitDate)
