@@ -249,7 +249,14 @@ header .social img {
 
 .discoverContainer  {
     display: grid;
-    grid-template-columns: 400px;
+    grid-template-columns: 100%;
     justify-content: center;
 
 }
+
+.discoverContainer picture img {
+    width: 100%;
+    height: auto;
+    
+  }
+

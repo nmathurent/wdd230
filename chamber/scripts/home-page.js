@@ -109,12 +109,13 @@ localStorage.setItem("lastvisited-date", lastVisitDate)
 let imagesToLoad = document.querySelectorAll("img[data-src]");
 
 const imgOptions = {
-    threshold: 1,
+    threshold:1,
     rootMarging: "0px 0px 50px 0px"
 };
 
 const loadImages = (image) => {
   image.setAttribute("src", image.getAttribute("data-src"));
+  console.log("Pase por aqui6:" + image.getAttribute("data-src"));
   image.onload = () => {
     image.removeAttribute("data-src");
   };
