@@ -112,4 +112,16 @@
         grid-row: 5 / 6;
     }
 
+    .hover-img {
+        width: 60%;
+        height: auto;
+        border: 10px solid #8FCEEB;
+        transition: transform .5s;
+        box-shadow: 5px 5px 10px #6f7364;
+    }
+    
+    .hover-img:hover {
+        opacity: .6;
+        transform: scale(1.1);
+    }
 }

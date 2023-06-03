@@ -260,3 +260,8 @@ header .social img {
     
   }
 
+  .hover-img {
+    width: 50%;
+    height: auto;
+}
+
