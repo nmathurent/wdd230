@@ -11,7 +11,10 @@ let kmperhour = s * 1.609344;            // converting mph to kph
 const tcelsius = (t - 32) * 0.5556;      // converting fahrenheit to celsius
 
 // Placing the value of the current year variable into the HTML file
-document.querySelector('#temperature').textContent = `${tcelsius.toFixed(0)}`;
+var elementTCelsius = document.querySelector('#temperature');
+if (elementTCelsius) {
+  elementTCelsius.textContent = `${tcelsius.toFixed(0)}`;
+}
 
 if (t <= 50 && s > 3.0) {
   sexp = s ** 0.16
@@ -23,6 +26,14 @@ else {
      windchill = "N/A";
 }
 
-document.querySelector('#windchill').textContent = `${windchill}`;
-document.querySelector('#kmperhour').textContent = `${kmperhour.toFixed(1)}`;
+var element = document.querySelector('#windchill');
+if (element) {
+  element.textContent = `${windchill}`;
+}
+
+var elementKmperhour = document.querySelector('#kmperhour');
+if (elementKmperhour) {
+  elementKmperhour.textContent = `${kmperhour.toFixed(1)}`;
+}
+
 
