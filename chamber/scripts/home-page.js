@@ -84,7 +84,7 @@ const msToDays = 86400000;
 const visitsTimeDisp = document.querySelector(".visitDays");
 
 // get the stored value in LocalStorage
-let lastVisitDate = Number(window.localStorage.getItem("lastvisited-date"));
+let lastVisitDate = Number(window.localStorage.getItem("lastvisited-date")) || 0;
 
 // determine if this is the first visit or calculate the days between visits
 if (lastVisitDate !== 0) {
@@ -92,7 +92,11 @@ if (lastVisitDate !== 0) {
   // var newDate = new Date();
   // newDate.setDate(day);
   // lastVisitDate = newDate.getTime();
-  let numDays = (Date.now() - lastVisitDate) / msToDays; 
+  let numDays = (Date.now() - lastVisitDate) / msToDays;
+  console.log(Date.now()); 
+  console.log(lastVisitDate);
+  console.log(lastVisitDate - Date.now());
+  console.log(msToDays);
   visitsTimeDisp.textContent = ` ${numDays.toFixed(0)} days`;
 } else {
   visitsTimeDisp.textContent = ` first time!`;
@@ -100,41 +104,6 @@ if (lastVisitDate !== 0) {
 
 // store the last visited date
 lastVisitDate = Date.now();
-localStorage.setItem("lastvisited-date", lastVisitDate)
+localStorage.setItem("lastvisited-date", lastVisitDate);
 
 
-// Loading Progressive images
-// Date: May 30, 2023
-
-let imagesToLoad = document.querySelectorAll("img[data-src]");
-
-const imgOptions = {
-    threshold: 1,
-    rootMarging: "0px 0px 50px 0px"
-};
-
-const loadImages = (image) => {
-  image.setAttribute("src", image.getAttribute("data-src"));
-  image.onload = () => {
-    image.removeAttribute("data-src");
-  };
-};
-
-if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((items, observer) => {
-      items.forEach((item) => {
-        if (item.isIntersecting) {
-          loadImages(item.target);
-          observer.unobserve(item.target);
-        }
-      });
-    }, imgOptions);
-
-    imagesToLoad.forEach((img) => {
-      observer.observe(img);
-    });
-  } else {
-    imagesToLoad.forEach((img) => {
-      loadImages(img);
-    });
-  }
