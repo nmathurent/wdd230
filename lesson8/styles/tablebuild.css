@@ -1,6 +1,6 @@
 :root {
-	--back: hsla(150, 50%, 30%, 1);
-  --back2: hsla(150, 50%, 30%, .5);
+	--back: hsla(0, 0%, 0%, 1);
+  --back2: hsla(0, 0%, 50%, .5);
   --foredark: hsla(0,0%,10%,1);
 	--forelight: hsla(0,0%,100%,1);
 	--border: hsla(0,0%,20%,.8);
@@ -27,7 +27,12 @@ caption {
 	font-size: .85rem;
 }
 
-tr:first-child th, .highlight {
+tr:first-child th {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+tr:first-child th, .blackBG {
 	background-color: var(--back);
 	color: var(--forelight);
 }
@@ -46,6 +51,6 @@ td {
 	text-align: center;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(even) {
 	background-color: var(--zebra);
 }
