@@ -1,6 +1,6 @@
 :root {
 	--back: hsla(0, 0%, 0%, 1);
-  --back2: hsla(0, 0%, 50%, .5);
+  --back2: hsla(0, 0%, 25%, 1);
   --foredark: hsla(0,0%,10%,1);
 	--forelight: hsla(0,0%,100%,1);
 	--border: hsla(0,0%,20%,.8);
@@ -10,7 +10,7 @@
 }
 
 body {
-	font-family: "EB Garamond", Arial, serif;
+	font-family: Roboto, helvetica, sans-serif;
 }
 
 table {
@@ -30,6 +30,13 @@ caption {
 tr:first-child th {
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size: larger;
+}
+
+
+.blackBG {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 tr:first-child th, .blackBG {
@@ -39,16 +46,21 @@ tr:first-child th, .blackBG {
 
 th, td {
 	padding: 7px 15px;
+}
+
+td {
 	border: 1px solid var(--borderlight);
 }
 
 th {
 	background-color: var(--back2);
-	font-size: larger;
+  color: var(--forelight);
+	font-size: medium;
 }
 
 td {
 	text-align: center;
+  font-weight: 700;
 }
 
 tbody tr:nth-child(even) {
