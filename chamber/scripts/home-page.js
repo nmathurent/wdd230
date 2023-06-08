@@ -137,3 +137,32 @@ var seconds = d.getSeconds();
 document.getElementById("dateNtime").value = d.toDateString() + " " + hours + ":" + mins + ":" + seconds;
 
 
+/* Display Membership Benefits  */
+
+document.getElementById("membershipBenefits").textContent = "";
+
+function getSelectedRadio() {
+  let radio1 = document.getElementById('radio1');
+  let radio2 = document.getElementById('radio2');
+  let radio3 = document.getElementById('radio3');
+  let radio4 = document.getElementById('radio4');
+  console.log("TEST NElson" + radio1.value + " " + radio1.checked);
+ if (radio1.checked) {
+   console.log("Entre radio 1");
+   document.getElementById("membershipBenefits").textContent = "NP Membership is for non profit organizations and there is no fee.";
+ }
+ if (radio2.checked) {
+   console.log("Entre radio 2");
+   document.getElementById("membershipBenefits").textContent = "Bronze Membership has a fee of $150.00, include trainings.";
+ }
+ if (radio3.checked) {
+   console.log("Entre radio 3");
+   document.getElementById("membershipBenefits").textContent = "Silver Membership has a fee of $250.00, include trainings and advertising.";
+ }
+ if (radio4.checked) {
+   console.log("Entre radio 4");
+   document.getElementById("membershipBenefits").textContent = "Gold Membership has a fee of $350.00, include trainings, advertising and event discounts.";
+ }
+}
+
+

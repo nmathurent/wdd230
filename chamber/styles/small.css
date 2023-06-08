@@ -286,7 +286,7 @@ form label.top1, form div {
     font-size: .8rem;
 }
 
-form label.top1 input, form label.top1 select {
+form label.top1 input, form label.top1 select, #bdesc {
     display: block;
     font-size: 1rem;
     border: 1px solid #999;
@@ -304,9 +304,10 @@ form label.sbs {
     color: #555;
 }
 
-form input.submitBtn {
+form input.submitBtn, #benefits {
     border: none;
-    background-color: #9c2c13;;
+    /* background-color: #9c2c13; */
+    background-color: yellowgreen;
     color: white;
     border-radius: 1rem;
     padding: .75rem 1.5rem;
@@ -324,9 +325,17 @@ form label.top1 input:required:valid {
 }
 
 form fieldset {
+    /* padding: 0 2%;
+    min-height: 20rem;
+    padding: .5rem 2%; */
+
     margin: 2rem 0;
     border: 1px solid #445ba9;
     border-radius: 10px;
+}
+
+#membershipBenefits, #benefits {
+    display: none;
 }
 
 
