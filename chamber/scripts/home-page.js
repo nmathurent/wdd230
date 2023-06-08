@@ -126,4 +126,14 @@ if (lastVisitDate !== 0) {
 lastVisitDate = Date.now();
 localStorage.setItem("lastvisited-date", lastVisitDate);
 
+/* Calculating Current Date and Time  */
+
+var d = new Date();
+
+// Set the value of the "time" field
+var hours = d.getHours();
+var mins = d.getMinutes();
+var seconds = d.getSeconds();
+document.getElementById("dateNtime").value = d.toDateString() + " " + hours + ":" + mins + ":" + seconds;
+
 
