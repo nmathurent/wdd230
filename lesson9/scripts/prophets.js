@@ -13,9 +13,26 @@ async function getProphetData() {
   
 const displayProphets = (prophets) => {
     const cards = document.querySelector('div.cards'); // select the output container element
+    let prophetNumber = 0;
+    let prophetPosition = "";
   
     prophets.forEach((prophet) => {
       // Create elements to add to the div.cards element
+      prophetNumber += 1;
+      switch (prophetNumber){
+        case 3:
+                prophetPosition = "rd";
+                break;
+        case 2:
+                prophetPosition = "nd";
+                break;
+        case 1:
+                prophetPosition = "st";
+                break;
+        default:
+            prophetPosition = "th";
+            break;
+     }
       let card = document.createElement('section');
       let h2 = document.createElement('h2');
       let portrait = document.createElement('img');
@@ -29,7 +46,7 @@ const displayProphets = (prophets) => {
   
       // Build the image portrait by setting all the relevant attribute
       portrait.setAttribute('src', prophet.imageurl);
-      portrait.setAttribute('alt', `Portait of ${prophet.name} ______________`);
+      portrait.setAttribute('alt', `Portait of ${prophet.name} ${prophet.lastname} - ${prophetNumber}${prophetPosition} Latter-day President`);
       portrait.setAttribute('loading', 'lazy');
       portrait.setAttribute('width', '340');
       portrait.setAttribute('height', '440');
