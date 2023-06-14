@@ -338,6 +338,11 @@ form fieldset {
     display: none;
 }
 
+/* Discorevy Page section */
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
 
 

@@ -7,7 +7,9 @@ const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophet
 async function getProphetData() {
     const response = await fetch(url);
     const data = await response.json();
-    //console.table(data.prophets);  // note that we reference the prophet array of the data object given the structure of the json file
+    console.log(data);
+    console.log("----");
+    console.table(data.prophets);  // note that we reference the prophet array of the data object given the structure of the json file
     displayProphets(data.prophets);
 }
   
@@ -20,14 +22,14 @@ const displayProphets = (prophets) => {
       // Create elements to add to the div.cards element
       prophetNumber += 1;
       switch (prophetNumber){
-        case 3:
-                prophetPosition = "rd";
+        case 1:
+                prophetPosition = "st";
                 break;
         case 2:
                 prophetPosition = "nd";
                 break;
-        case 1:
-                prophetPosition = "st";
+        case 3:
+                prophetPosition = "rd";
                 break;
         default:
             prophetPosition = "th";

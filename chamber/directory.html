@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Irvine Chamber of Commerce Join Page</title>
+        <title>Irvine Chanmber of Commerce Directory Page</title>
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="shortcut icon" href="favicon.ico">
         <!--<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">-->
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/large.css">
         <meta
             name="description"
-            content="Chamber Join Page Build by Nelson Mathurent in WDD 230: Web 
+            content="Chamber Directory Page Build by Nelson Mathurent in WDD 230: Web 
                      Frontend Development at Brigham Young University - Idaho.">
     </head>
     <body>
@@ -51,36 +51,7 @@
             
         </header>
         <main>
-            
-            <form method="get" action="thanks.html">
-                <h1>Join Irvine Chamber of Commerce</h1>
-                <fieldset>
-                    <legend>Applicant Information</legend>
-                    <label class="top1">First Name*<input type="text" name="fname" required></label>
-                    <label class="top1">Last Name*<input type="text" name="lname" required></label>
-                    <label class="top1">Title*<input type="text" name="btitle" minlength="7" pattern="[[A-Z]*[a-z]*/s-]" required></label>
-                    <label class="top1">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                    <label class="top1">Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
-                </fieldset>
-                <fieldset>
-                    <legend>Business Information</legend>
-                    <label class="top1">Business Name*<input type="text" name="bname" required></label>
-                    <div id="memberShipDiv">
-                    <div>Membership Level</div>
-                    <label class="sbs"><input type="radio" id="radio1" name="membership" value="NP"> NP Membership</label>
-                    <label class="sbs"><input type="radio" id="radio2" name="membership" value="Bronze"> Bronze Membership</label>
-                    <label class="sbs"><input type="radio" id="radio3" name="membership" value="Silver"> Silver Membership</label>
-                    <label class="sbs"><input type="radio" id="radio4" name="membership" value="Gold"> Gold Membership</label>
-                    <button class="join" id="benefits" onclick="getSelectedRadio()">Show Membership Benefits</button>
-                    <p id="membershipBenefits"></p>
-                    </div>
-                    <label class="top1">Business Description
-                    <textarea id="bdesc" name="bdesc" rows="5" cols="33" ></textarea></label>
-                    <input type="hidden" id="dateNtime" name="dateNtime" value="CurrentDateNTime">
-                </fieldset>
-                
-                <input type="submit" value="Join the Chamber" class="submitBtn">
-            </form> 
+            <div class="cards"></div>
         </main>
         <footer>
             
