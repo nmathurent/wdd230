@@ -129,9 +129,7 @@ localStorage.setItem("lastvisited-date", lastVisitDate);
 /* Calculating Current Date and Time  */
 
 function SetDateNTime() {
-  var d = new Date();
-
-  document.getElementById("dateNtime").value = d.toDateString();
+  document.getElementById("dateNtime").value = new Date();
 }
 
 // var d = new Date();
