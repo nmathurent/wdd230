@@ -401,3 +401,8 @@ form fieldset {
 	font-family: Roboto, Helvetica, sans-serif;
 }
 
+#weather-icon {
+    width: 60px;
+    height: auto;
+}
+
