@@ -279,11 +279,27 @@ form legend {
     padding: 0 0.5rem;
 }
 
+form legend.contact1 {
+    font-size: 2rem;
+    color: white;
+}
+
+form h2.contact2 {
+    font-size: 1rem;
+    color: white;
+}
+
 form label.top1, form div {
     display: block;
     padding-top: 1rem;
     color: #9c2c13;
     font-size: .8rem;
+}
+
+form label.topc {
+
+    color: yellow;
+
 }
 
 form label.top1 input, form label.top1 select, #bdesc {

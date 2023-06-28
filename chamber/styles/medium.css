@@ -154,3 +154,12 @@
 .discoverMain {
     display:inline;
 }
+
+main contactsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contactform {
+    background-color: #0B426D;
+}
