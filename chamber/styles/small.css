@@ -438,3 +438,15 @@ form label.top1 input.topb, #bdesc {
     padding-left: 20px;
 }
 
+.home-title {
+    font-size: 2rem;
+}
+
+.news {
+    text-align:  left;
+}
+
+.eachnews {
+    margin-top: 10px;
+}
+
