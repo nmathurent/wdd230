@@ -300,7 +300,10 @@ form label.topc {
 
     color: yellow;
 
+
 }
+
+
 
 form label.top1 input, form label.top1 select, #bdesc {
     display: block;
@@ -426,4 +429,12 @@ form fieldset {
     font-size: .5rem;
 }
 
+form label.top1 input.topb, #bdesc {
+
+    background-color: white;
+}
+
+.contactsection {
+    padding-left: 20px;
+}
 
