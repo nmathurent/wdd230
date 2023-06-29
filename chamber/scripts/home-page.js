@@ -171,4 +171,96 @@ function getSelectedRadio() {
  }
 }
 
+/* BEGIN  DISPLAY DYNAMICALLY THE SPOTLIGHT INFORMATION */
+async function getCompanyData() {
+  const response = await fetch('json/chamberDirectory.json');
+  const data = await response.json();
+  console.log(JSON.stringify(data));
+  console.table(data.companies);  // note that we reference the company array of the data object given the structure of the json file
+  displayCompanies(data.companies);
 
+}
+
+const displayCompanies = (companies) => {
+const cards = document.querySelector('div.spotlight'); // select the output container element
+const spotcomp = [];
+let companyNumber = 0;
+let companyPosition = "";
+
+companies.forEach((company) => {
+  // Create elements to add to the div.cards element
+  companyNumber += 1;
+  switch (companyNumber){
+    case 1:
+            companyPosition = "st";
+            break;
+    case 2:
+            companyPosition = "nd";
+            break;
+    case 3:
+            companyPosition = "rd";
+            break;
+    default:
+        companyPosition = "th";
+        break;
+ }
+
+  if (company.membershiplevel == "gold" || company.membershiplevel == "silver") {
+    spotcomp.push({compname:company.name, complogo:company.logourl, compaddress:company.address, compphone:company.phone, compurl:company.url});
+  }
+}) // end of forEach loop
+
+let numcomp = 0;
+let compIndex = 0;
+const indexAlreadyIncluded = [];
+
+// Loop used for randomly select the company
+console.log("Company:" + "Before Loop");
+while (numcomp != 3) {
+  compIndex = Math.floor(Math.random() * 11);
+  
+  if (compIndex < spotcomp.length && !(indexAlreadyIncluded.includes(compIndex))) {
+    indexAlreadyIncluded.push(compIndex);
+    numcomp += 1;
+    console.log("Company:" + "Inside Loop 01" + "comp:" + spotcomp[compIndex].compurl + "--" + numcomp);
+    let card = document.createElement('section');
+    let h2 = document.createElement('h2');
+    let portrait = document.createElement('img');
+    let p1 = document.createElement('p');
+    let p2 = document.createElement('p');
+    let p3 = document.createElement('p');
+
+    console.log("Company:" + "Inside Loop 02" + numcomp);
+    // Build the image portrait by setting all the relevant attribute
+    portrait.setAttribute('src', spotcomp[compIndex].compurl);
+    portrait.setAttribute('alt', `Logo of ${spotcomp[compIndex].compname}`);
+    portrait.setAttribute('loading', 'lazy');
+    portrait.setAttribute('width', '100');
+    portrait.setAttribute('height', '40');
+
+    console.log("Company:" + "Inside Loop 03" + numcomp);
+    // Build the h2 content out to show the company name - finish the template string
+    h2.textContent = `${spotcomp[compIndex].compname}`;
+    p1.textContent = `${spotcomp[compIndex].compaddress}`;
+    p2.textContent = `${spotcomp[compIndex].compphone}`;
+    p3.textContent = `${spotcomp[compIndex].compurl}`;
+    console.log("Company:" + `${spotcomp[compIndex].compname}`);
+
+
+    // Append the section(card) with the created elements
+    card.appendChild(portrait);
+    card.appendChild(h2);
+    card.appendChild(p1);
+    card.appendChild(p2);
+    card.appendChild(p3);
+
+
+    cards.appendChild(card);
+  }
+}
+
+} // end of function expression
+
+getCompanyData();
+
+/* END  DISPLAY DYNAMICALLY THE SPOTLIGHT INFORMATION */
