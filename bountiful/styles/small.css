@@ -1,0 +1,432 @@
+/* HTML Selectors */
+body {
+    font-family: 'Petrona', 'Roboto', serif;
+    font-size: 16px;
+}
+
+.logo {
+    width: 400px;
+    height: auto; 
+} 
+
+header {
+    font-size: .75rem;
+    position: relative;
+}
+
+h1 {
+    
+    font-size: 1.5rem;
+    margin: 0.15rem;
+}
+
+h2 {
+    font-size: .90rem;
+}
+
+p {
+    font-family: 'Roboto', Arial, serif;
+}
+
+header {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 15px; 
+}
+
+.companyname {
+    margin-left: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+#hamburguerBtn {
+    margin: .2rem 2vw;
+    background: transparent;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid gray;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+nav ul li a {
+    display: block;
+    /* padding: .8rem 2vw; */
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    border-top: 1px solid rgba(0,0,0,0.5);
+    background-color: black;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li.active a {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff
+}
+
+nav ul li a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+nav ul {display: none;}
+nav ul.open {display: block;}
+
+
+#hamburguerBtn span:nth-child(1) {display: block;}
+#hamburguerBtn span:nth-child(2) {display: none;}
+
+#hamburguerBtn.open span:nth-child(1) {display: none;}
+#hamburguerBtn.open span:nth-child(2) {display: block;}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+main section{
+    margin: 0.5rem;
+    border: 1px solid #bbb;
+    /* background-color: #0D9CF2; */
+    background-color: #0B426D;
+    color: white;
+    height: auto;
+    text-align: center;
+}
+
+main .spotlight{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    border: 1px solid #bbb;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #105E9B;
+
+}
+
+main section.section2 {
+    display: none;
+}
+
+main section.spotlight3 {
+    display: none;
+}
+
+main section h2 {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-left: 10px;
+    color: #F8F807;
+}
+
+main section a {
+    color: #F8F807; 
+    text-decoration: none;
+}
+/* img {
+     width: 100px;
+     height: auto;
+} */
+
+.section1 {
+    position: relative;
+}
+
+
+#hero-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.line {
+    width: 80%;
+}
+
+.hero-msg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.hero-button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+ .join-button {
+    margin-top: 30px;
+    left: 30px;
+}
+
+.join {
+    color: #fff;
+    background-color: yellowgreen;
+    text-decoration: none;
+    /* font-size: 18px; */
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.roundImage {
+    border-radius: 50%;
+  }
+   
+#lastupdated {
+
+    color: white;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer {
+    padding: 5px;
+    font-size: .75rem;
+    text-align: center;
+
+}
+
+#footerfield4 {
+    display: none;
+}
+
+.footerSection3 {
+    margin-top: 20px;
+    border-top: 1px solid;
+ }
+
+.footerspacing {
+    margin: 0;
+}
+
+header .social img {
+    height: 25%;
+    width:  25%;
+}
+
+
+.discoverContainer  {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+
+}
+
+.discoverContainer picture img {
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .hover-img {
+    width: 50%;
+    height: auto;
+}
+
+.p-discover {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: left;
+}
+
+/* ---------- FORM   --------------*/
+
+form legend {
+    color: #445ba9;
+    margin: 0 1rem;
+    padding: 0 0.5rem;
+}
+
+form legend.contact1 {
+    font-size: 2rem;
+    color: white;
+}
+
+form h2.contact2 {
+    font-size: 1rem;
+    color: white;
+}
+
+form label.top1, form div {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: .8rem;
+}
+
+form label.topc {
+
+    color: yellow;
+
+
+}
+
+
+
+form label.top1 input, form label.top1 select, #bdesc {
+    display: block;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 15rem;
+    background-color: rgba(0,0,0,0.1);
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #555;
+}
+
+form input.submitBtn, #benefits {
+    border: none;
+    /* background-color: #9c2c13; */
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 15rem;
+}
+
+form label.top1 input:required {
+    border-left: red solid 6px;
+}
+
+form label.top1 input:required:valid {
+    border-left: green solid 6px;
+}
+
+form fieldset {
+    /* padding: 0 2%;
+    min-height: 20rem;
+    padding: .5rem 2%; */
+
+    margin: 2rem 0;
+    border: 1px solid #445ba9;
+    border-radius: 10px;
+}
+
+#membershipBenefits, #benefits {
+    display: none;
+}
+
+/* Discorevy Page section */
+
+.discoverMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-family: "Caveat", cursive;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+#weather-icon {
+    width: 60px;
+    height: auto;
+}
+
+#smallletter {
+    font-size: .5rem;
+}
+
+form label.top1 input.topb, #bdesc {
+
+    background-color: white;
+}
+
+.contactsection {
+    padding-left: 20px;
+}
+
+.home-title {
+    font-size: 2rem;
+}
+
+.news {
+    text-align:  left;
+}
+
+.eachnews {
+    margin-top: 10px;
+}
+
