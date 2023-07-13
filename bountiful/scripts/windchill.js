@@ -2,6 +2,9 @@
 // Date: May 23, 2023
 
 const weatherIcon = document.querySelector('#weather-icon');
+const weatherIcon1 = document.querySelector('#weather-icon1');
+const weatherIcon2 = document.querySelector('#weather-icon2');
+const weatherIcon3 = document.querySelector('#weather-icon3');
 const daylist = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const url = 'https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad,CA,us&appid=cbb8d5e1cf97e51db015d685ee3d3340&units=imperial';
@@ -46,33 +49,52 @@ function displayResults(weatherData) {
 
     for (let i = 0; i < weatherData.list.length; i++) {
       console.log(weatherData.list[i].dt);
-      console.log(nd.toLocaleDateString('en-CA'));
-      console.log(day1.toLocaleDateString('en-CA') + " 00:00:00");
-      console.log(day2.toLocaleDateString('en-CA') + " 00:00:00");
-      console.log(day3.toLocaleDateString('en-CA') + " 00:00:00");
+      console.log(`day : ${i}` + nd.toLocaleDateString('en-CA'));
+      console.log(`day1: ` + day1.toLocaleDateString('en-CA') + " 03:00:00");
+      console.log(`day2: ` + day2.toLocaleDateString('en-CA') + " 03:00:00");
+      console.log(`day3: ` + day3.toLocaleDateString('en-CA') + " 03:00:00");
       console.log(weatherData.list[i].dt_txt);
       console.log(weatherData.list[i].dt_txt.substr(0,10));
-      if (weatherData.list[i].dt_txt == day1.toLocaleDateString('en-CA') + " 00:00:00") {
+
+      if (weatherData.list[i].dt_txt == day1.toLocaleDateString('en-CA') + " 03:00:00") {
+        const iconsrc1 = `https://openweathermap.org/img/w/${weatherData.list[i].weather[0].icon}.png`;
+        const desc1 = weatherData.list[i].weather[0].description;
+
+        weatherIcon1.setAttribute('src', iconsrc1);
+        weatherIcon1.setAttribute('alt', desc1);
+
         var elementT = document.querySelector('#temperature1');
         var elementD = document.querySelector('#day1');
         if (elementT) {
-          elementT.textContent = weatherData.list[i].main.temp;
+          elementT.textContent = weatherData.list[i].main.temp.toFixed(0);
           elementD.textContent = daylist[day1.getDay()];
         }
       }
-      if (weatherData.list[i].dt_txt == day2.toLocaleDateString('en-CA') + " 00:00:00") {
+      if (weatherData.list[i].dt_txt == day2.toLocaleDateString('en-CA') + " 03:00:00") {
+        const iconsrc2 = `https://openweathermap.org/img/w/${weatherData.list[i].weather[0].icon}.png`;
+        const desc2 = weatherData.list[i].weather[0].description;
+
+        weatherIcon2.setAttribute('src', iconsrc2);
+        weatherIcon2.setAttribute('alt', desc2);
+
         var elementT = document.querySelector('#temperature2');
         var elementD = document.querySelector('#day2');
         if (elementT) {
-          elementT.textContent = weatherData.list[i].main.temp;
+          elementT.textContent = weatherData.list[i].main.temp.toFixed(0);
           elementD.textContent = daylist[day2.getDay()];
         }
       }
-      if (weatherData.list[i].dt_txt == day3.toLocaleDateString('en-CA') + " 00:00:00") {
+      if (weatherData.list[i].dt_txt == day3.toLocaleDateString('en-CA') + " 03:00:00") {
+        const iconsrc3 = `https://openweathermap.org/img/w/${weatherData.list[i].weather[0].icon}.png`;
+        const desc3 = weatherData.list[i].weather[0].description;
+
+        weatherIcon3.setAttribute('src', iconsrc3);
+        weatherIcon3.setAttribute('alt', desc3);
+
         var elementT = document.querySelector('#temperature3');
         var elementD = document.querySelector('#day3');
         if (elementT) {
-          elementT.textContent = weatherData.list[i].main.temp;
+          elementT.textContent = weatherData.list[i].main.temp.toFixed(0);
           elementD.textContent = daylist[day3.getDay()];
         }
       }
