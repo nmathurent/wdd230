@@ -29,6 +29,10 @@ const displayFruits = (fruits) => {
       // Create elements to add to the select.fruits element
    
       carbohydrates[idx] = fruit.nutritions.carbohydrates;
+      protein[idx]       = fruit.nutritions.protein;
+      fat[idx]           = fruit.nutritions.fat;
+      calories[idx]      = fruit.nutritions.calories;
+      sugar[idx]         = fruit.nutritions.sugar;
       idx = idx + 1;
 
       let fOption1 = document.createElement('option');
@@ -83,6 +87,10 @@ const displayFruits = (fruits) => {
     let orderDate = document.getElementById("orderDate");
     let specinst = document.getElementById("specinst");
     let carbohydrates = document.getElementById("carbohydrates");
+    let protein = document.getElementById("protein");
+    let fat     = document.getElementById("fat");
+    let calories = document.getElementById("calories");
+    let sugar = document.getElementById("sugar");
     console.log(orderDate);
 
 
@@ -96,6 +104,10 @@ const displayFruits = (fruits) => {
       let p6 = document.createElement('p');
       let p7 = document.createElement('p');
       let p8 = document.createElement('p');
+      let p9 = document.createElement('p');
+      let p10 = document.createElement('p');
+      let p11 = document.createElement('p');
+      let p12 = document.createElement('p');
   
       // Build the h2 content out to show the prophet's full name - finish the template string
       h2.textContent = `Name: ${firstname.value}`;
@@ -107,6 +119,10 @@ const displayFruits = (fruits) => {
       p6.textContent = `Special Instructions: ${specinst.value}`;
       p7.textContent = `Order date: ${orderDate.value}`;
       p8.textContent = `Total carbohydrates: ${carbohydrates.value}`;
+      p9.textContent = `Total protein: ${protein.value}`;
+      p10.textContent = `Total fat: ${fat.value}`;
+      p11.textContent = `Total calories: ${calories.value}`;
+      p12.textContent = `Total sugar: ${sugar.value}`;
   
 
       // Append the section(card) with the created elements
@@ -119,6 +135,10 @@ const displayFruits = (fruits) => {
       card.appendChild(p6);
       card.appendChild(p7);
       card.appendChild(p8);
+      card.appendChild(p9);
+      card.appendChild(p10);
+      card.appendChild(p11);
+      card.appendChild(p12);
   
       cards.appendChild(card);
 
@@ -126,10 +146,30 @@ const displayFruits = (fruits) => {
 
   function SetOrderDate() {
     let totalcarbohydrates = 0;
+    let totalprotein = 0;
+    let totalfat = 0;
+    let totalcalories = 0;
+    let totalsugar = 0;
 
     document.getElementById("orderDate").value = new Date().toISOString().split('T')[0];
     totalcarbohydrates = totalcarbohydrates + carbohydrates[document.getElementById("fruit1").selectedIndex]
                                             + carbohydrates[document.getElementById("fruit2").selectedIndex]
                                             + carbohydrates[document.getElementById("fruit3").selectedIndex];
-    document.getElementById("carbohydrates").value = totalcarbohydrates;
+    totalprotein = totalprotein + protein[document.getElementById("fruit1").selectedIndex]
+                                + protein[document.getElementById("fruit2").selectedIndex]
+                                + protein[document.getElementById("fruit3").selectedIndex];
+    totalfat = totalfat + fat[document.getElementById("fruit1").selectedIndex]
+                                + fat[document.getElementById("fruit2").selectedIndex]
+                                + fat[document.getElementById("fruit3").selectedIndex];
+    totalcalories = totalcalories + calories[document.getElementById("fruit1").selectedIndex]
+                                + calories[document.getElementById("fruit2").selectedIndex]
+                                + calories[document.getElementById("fruit3").selectedIndex];
+    totalsugar = totalsugar + sugar[document.getElementById("fruit1").selectedIndex]
+                                + sugar[document.getElementById("fruit2").selectedIndex]
+                                + sugar[document.getElementById("fruit3").selectedIndex];
+    document.getElementById("carbohydrates").value = totalcarbohydrates.toFixed(2);
+    document.getElementById("protein").value       = totalprotein.toFixed(2);
+    document.getElementById("fat").value           = totalfat.toFixed(2);
+    document.getElementById("calories").value      = totalcalories.toFixed(2);
+    document.getElementById("sugar").value         = totalsugar.toFixed(2);
   }
