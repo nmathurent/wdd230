@@ -55,34 +55,34 @@
         </header>
         <main>
             
-            <form method="get" action="thanks.html">
+            <form method="get" action="" id="freshForm">
                 <h1>Build your own specialty drink</h1>
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label class="top1">First Name*<input type="text" name="fname" required></label>
-                    <label class="top1">Last Name*<input type="text" name="lname" required></label>
-                    <label class="top1">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                    <label class="top1">Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
+                    <label class="top1">First Name*<input type="text" id="fname" name="fname" required></label>
+                    <label class="top1">Last Name*<input type="text" id="lname" name="lname" required></label>
+                    <label class="top1">Email*<input type="email" id="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label class="top1">Phone*<input type="tel" id="phone" name="phone" placeholder="1235551234" required></label>
                 </fieldset>
                 <fieldset>
-                    <legend>Select your Ingredients</legend>
-                    <label class="top1">Business Name*<input type="text" name="bname" required></label>
-                    <div id="memberShipDiv">
-                    <div>Membership Level</div>
-                    <label class="sbs"><input type="radio" id="radio1" name="membership" value="NP"> NP Membership</label>
-                    <label class="sbs"><input type="radio" id="radio2" name="membership" value="Bronze"> Bronze Membership</label>
-                    <label class="sbs"><input type="radio" id="radio3" name="membership" value="Silver"> Silver Membership</label>
-                    <label class="sbs"><input type="radio" id="radio4" name="membership" value="Gold"> Gold Membership</label>
-                    <button class="join" id="benefits" onclick="getSelectedRadio()" type="button">Show Membership Benefits</button>
-                    <p id="membershipBenefits"></p>
-                    </div>
-                    <label class="top1">Business Description
+                    <legend>Select 3 fruits</legend>
+                    <label class="top1">Fruit 1*
+                        <select class="fruits1" name="fruit1"></select>
+                    </label>
+                    <label class="top1">Fruit 2*
+                        <select class="fruits2" name="fruit2"></select>
+                    </label>
+                    <label class="top1">Fruit 3*
+                        <select class="fruits3" name="fruit3"></select>
+                    </label>
+                    <label class="top1">Special Instructions
                     <textarea id="bdesc" name="bdesc" rows="5" cols="33" ></textarea></label>
                     <input type="hidden" id="dateNtime" name="dateNtime" value="CurrentDateNTime">
                 </fieldset>
                 
-                <input type="submit" value="Join the Chamber" class="submitBtn" onclick="SetDateNTime()">
-            </form> 
+                <input type="submit" value="Build the Drink" class="submitBtn" onclick="DisplayOutputArea()">
+            </form>
+            <div class="orderArea"></div>
         </main>
         <footer>
             
@@ -115,6 +115,6 @@
             
         </footer>
         <script src="scripts/home-page.js" defer></script>
-        <script src="scripts/windchill.js"></script>
+        <script src="scripts/fresh.js"></script>
     </body>
 </html>
