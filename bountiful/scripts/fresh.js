@@ -53,30 +53,41 @@ const displayFruits = (fruits) => {
     const cards = document.querySelector('div.orderArea'); // select the output container element
 
     let firstname = document.getElementById("fname");
-    let lastname = document.getElementById("lname");
     let email = document.getElementById("email");
     let phone = document.getElementById("phone");
+    let fruit1 = document.getElementById("fruit1");
+    let fruit2 = document.getElementById("fruit2");
+    let fruit3 = document.getElementById("fruit3");
 
       let card = document.createElement('section');
       let h2 = document.createElement('h2');
       let p1 = document.createElement('p');
       let p2 = document.createElement('p');
+      let p3 = document.createElement('p');
+      let p4 = document.createElement('p');
+      let p5 = document.createElement('p');
   
       // Build the h2 content out to show the prophet's full name - finish the template string
-      h2.textContent = `Name: ${firstname.value} ${lastname.value}`;
+      h2.textContent = `Name: ${firstname.value}`;
       p1.textContent = `Email: ${email.value}`;
       p2.textContent = `Phone number: ${phone.value}`;
+      p3.textContent = `Selected fruit 1: ${fruit1.value}`;
+      p4.textContent = `Selected fruit 2: ${fruit2.value}`;
+      p5.textContent = `Selected fruit 3: ${fruit3.value}`;
   
 
       // Append the section(card) with the created elements
       card.appendChild(h2);
       card.appendChild(p1);
       card.appendChild(p2);
+      card.appendChild(p3);
+      card.appendChild(p4);
+      card.appendChild(p5);
   
       cards.appendChild(card);
 
   });
 
-  function DisplayOutputArea() {
-    document.getElementById("dateNtime").value = new Date();
+  function SetOrderDate() {
+    document.getElementById("orderDate").value = new Date();
   }
