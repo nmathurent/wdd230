@@ -119,5 +119,19 @@ async function apiFetch() {
       
 apiFetch();
 
+// Dissplay the number of ordered drinks 
+// get the stored value in localStorage
+let numDrinks = Number(window.localStorage.getItem("numdrinks"));
+
+if (numDrinks !== 0) {
+  textToDisplayDrinks = `The total number of specialty drinks that the current user has submitted from the Fresh page form is : ${numDrinks}`;
+} else {
+  textToDisplayDrinks = "";
+}
+var elementNumDrinks = document.querySelector('#numberOfDrinks');
+if (elementNumDrinks) {
+  elementNumDrinks.textContent = `${textToDisplayDrinks}`;
+}
+
 
 

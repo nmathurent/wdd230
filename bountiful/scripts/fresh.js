@@ -4,6 +4,10 @@
 // Variable used to hold the url that contains the URL string of the JSON resource provided
 const url = 'https://brotherblazzard.github.io/canvas-content/fruit.json';
 let carbohydrates = [];
+let protein       = [];
+let fat           = [];
+let calories      = [];
+let sugar         = [];
 
 async function getFruitData() {
     const response = await fetch(url);
@@ -55,6 +59,16 @@ const displayFruits = (fruits) => {
 
   freshForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    // get the stored value in localStorage
+    let numDrinks = Number(window.localStorage.getItem("numdrinks"));
+
+    // increment the number of drinks.
+    numDrinks++;
+    // store the new number of drinks value
+    localStorage.setItem("numdrinks", numDrinks);
+
+
     console.log("---Inside DisplayOutputArea Last -");
     const cards = document.querySelector('div.orderArea'); // select the output container element
 
