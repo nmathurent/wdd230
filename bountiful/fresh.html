@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Irvine Chanmber of Commerce Directory Page</title>
+        <title>Irvine Chamber of Commerce Join Page</title>
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="shortcut icon" href="favicon.ico">
         <!--<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">-->
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/large.css">
         <meta
             name="description"
-            content="Chamber Directory Page Build by Nelson Mathurent in WDD 230: Web 
+            content="Chamber Join Page Build by Nelson Mathurent in WDD 230: Web 
                      Frontend Development at Brigham Young University - Idaho.">
     </head>
     <body>
@@ -39,8 +39,6 @@
             <nav>
                 <ul id="primaryNav">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="join.html">Join</a></li>
                     <li><a href="contact.html">Contact</a></li> 
                 </ul>
             </nav>
@@ -48,17 +46,45 @@
             <div class="todaybanner">
                 <p><span id="todaydate"></span></p>
             </div>
-            <div id="meet-banner">
+            <!-- <div id="meet-banner">
                 <p><span id="monday-tuesday"></span><button id= "bannerbtn" type="submit">❌</button></p>
-            </div>
+            </div> -->
             
         </header>
-        <main class="discoverMain">
-            <div class="menu">
-                <button id="grid">⏹️Grid</button>
-                <button id="list">📄List</button>
-            </div>
-            <article class="grid"></article>
+        <main>
+            
+            <form method="get" action="" id="freshForm">
+                <h1>Build your own specialty drink</h1>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top1">First Name*<input type="text" id="fname" name="fname" required></label>
+                    <label class="top1">Email*<input type="email" id="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label class="top1">Phone*<input type="tel" id="phone" name="phone" placeholder="1235551234" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Select 3 fruits</legend>
+                    <label class="top1">Fruit 1*
+                        <select class="fruits1" id="fruit1" name="fruit1"></select>
+                    </label>
+                    <label class="top1">Fruit 2*
+                        <select class="fruits2" id="fruit2" name="fruit2"></select>
+                    </label>
+                    <label class="top1">Fruit 3*
+                        <select class="fruits3" id="fruit3" name="fruit3"></select>
+                    </label>
+                    <label class="top1">Special Instructions
+                    <textarea id="specinst" name="specinst" rows="5" cols="33" ></textarea></label>
+                    <input type="hidden" id="orderDate" name="orderDate" value="CurrentDateNTime">
+                    <input type="hidden" id="carbohydrates" name="carbohydrates" value=0>
+                    <input type="hidden" id="protein" name="protein" value=0>
+                    <input type="hidden" id="fat" name="fat" value=0>
+                    <input type="hidden" id="calories" name="calories" value=0>
+                    <input type="hidden" id="sugar" name="sugar" value=0>
+                </fieldset>
+                
+                <input type="submit" value="Build the Drink" class="submitBtn" onclick="SetOrderDate()">
+            </form>
+            <div class="orderArea"></div>
         </main>
         <footer>
             
@@ -90,8 +116,7 @@
             </div>
             
         </footer>
-        <script src="scripts/home-page.js"></script>
-        <script src="scripts/windchill.js"></script>
-        <script src="scripts/directory.js"></script>
+        <script src="scripts/home-page.js" defer></script>
+        <script src="scripts/fresh.js"></script>
     </body>
 </html>
