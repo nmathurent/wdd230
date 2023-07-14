@@ -20,12 +20,13 @@
     </head>
     <body>
         <header>
-            <figure>
-                <img  class="logo" src="images/IrvineCoC_logo.webp" alt="Irvine Chamber of Commerce Logo">
+            <figure class="hsection1">
+                <img  class="logo-img" src="images/quiche-WBG.png" alt="Quiche photo from bountiful food page">
             </figure>
-            <div class="companyname">
-            <h1>Irvine</h1>
-            <h2>Chamber of Commerce</h2>
+            <div class="companyname hsection2">
+                <img class="logo" src="images/bf+logo.jpg" alt="Bountiful foods Logo">
+            <h1>Bountiful Foods</h1>
+
             </div>
             <div class="social">
                 <a href="https://facebook.com" target="_blank">
@@ -35,25 +36,23 @@
                     <img class="roundImage" src="images/instagram.png" alt="instagram icon">
                 </a>
             </div>
+            <div>
             <button id="hamburguerBtn"><span>&#9776;</span><span>X</span></button>
             <nav>
-                <ul id="primaryNav">
+                <ul class="bigchar1" id="primaryNav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contact.html">Contact</a></li> 
                 </ul>
             </nav>
-            
-            <div class="todaybanner">
-                <p><span id="todaydate"></span></p>
             </div>
-            <!-- <div id="meet-banner">
-                <p><span id="monday-tuesday"></span><button id= "bannerbtn" type="submit">❌</button></p>
-            </div> -->
-            
+            <figure class="hsection3">
+                <img  class="logo-img" src="images/AppleTart-WBG.png" alt="Photo of apple tart from taste of home page">
+            </figure>
         </header>
         <main>
             
             <form method="get" action="" id="freshForm">
+                <br><br>
                 <h1>Build your own specialty drink</h1>
                 <fieldset>
                     <legend>Personal Information</legend>
@@ -84,29 +83,31 @@
                 
                 <input type="submit" value="Build the Drink" class="submitBtn" onclick="SetOrderDate()">
             </form>
-            <div class="orderArea"></div>
+            <div class="orderArea bigchar1"></div>
         </main>
         <footer>
             
             <div class="footerSection1">
-                <img class="logo" src="images/IrvineCoC_logo.webp" alt="Irvine Chamber of Commerce Logo">
+                <img class="logo" src="images/bf+logo.jpg" alt="Bountiful foods Logo">
                 <section class="addresssection">
-                    <h2>Irvine Chamber of Commerce</h2>
-                    <p>1234 Irvine Blvd</p>
-                    <p>Irvine, California 9999</p>
+                    <h2>Bountiful Foods</h2>
+                    <p>890 Palomar Airport Rd</p>
+                    <p>Carlsbad, California 9999</p>
                 </section>
             </div>
             <div class="footerSection2">
                 <section class="locationsection">
-                     <p>info@irvinecc.org</p>
+                     <p>info@bountifulfoods.org</p>
                      <p>+(949) 1234-5678</p>
                      <p><span>&#128205;</span>Location Map</p>
+                     <p><a href="attributions.html">Attributions page</a></p>
                      <p><span>Time between visits:</span><span class="visitDays"></span></p>
+                     
                 </section>
             </div>
             <div class="footerSection3">
            
-                <p id="footerfield1">&copy; <span id="year"></span> Irvine Chamber </p>
+                <p id="footerfield1">&copy; <span id="year"></span> Final Project </p>
                 <p id="footerfield2">Nelson Mathurent</p>
                 <p id="footerfield3">WDD 230 Project</p>
                 <p id="footerfield4"><span id="lastupdated"></span></p>
@@ -116,7 +117,7 @@
             </div>
             
         </footer>
-        <script src="scripts/home-page.js" defer></script>
+        <script src="scripts/home-page.js"></script>
         <script src="scripts/fresh.js"></script>
     </body>
 </html>

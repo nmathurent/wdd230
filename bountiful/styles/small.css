@@ -4,9 +4,16 @@ body {
     font-size: 16px;
 }
 
+
+
 .logo {
     width: 400px;
+    width: 50%;
     height: auto; 
+} 
+
+.logo-img {
+    display: none; 
 } 
 
 header {
@@ -103,26 +110,13 @@ main section{
     margin: 0.5rem;
     border: 1px solid #bbb;
     /* background-color: #0D9CF2; */
-    background-color: #0B426D;
+    /* background-color: #0B426D; */
+    background-color: #fda478;
     color: white;
     height: auto;
     text-align: center;
 }
 
-main .spotlight{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 10px;
-    border: 1px solid #bbb;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: #105E9B;
-
-}
-
-main section.section2 {
-    display: none;
-}
 
 main section.spotlight3 {
     display: none;
@@ -150,8 +144,16 @@ main section a {
 
 
 #hero-img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: auto;
+    /* max-height: 100%; */
+    object-fit: cover;
+}
+
+#hero-img1 {
+    width: 100%;
+    height: auto;
+    /* max-height: 100%; */
     object-fit: cover;
 }
 
@@ -195,8 +197,10 @@ main section a {
 }
 
 header, footer {
-    background-color: black;
-    color: white;
+    background-color: white;
+    /* background-color: #4387f6; */
+    /* background-color: #fda478; */
+    color: black;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -430,3 +434,8 @@ form label.top1 input.topb, #bdesc {
     margin-top: 10px;
 }
 
+.contactsection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}

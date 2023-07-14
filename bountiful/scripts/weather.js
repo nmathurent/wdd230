@@ -56,7 +56,7 @@ function displayResults(weatherData) {
       console.log(weatherData.list[i].dt_txt);
       console.log(weatherData.list[i].dt_txt.substr(0,10));
 
-      if (weatherData.list[i].dt_txt == day1.toLocaleDateString('en-CA') + " 03:00:00") {
+      if (weatherData.list[i].dt_txt == day1.toLocaleDateString('en-CA') + " 12:00:00") {
         const iconsrc1 = `https://openweathermap.org/img/w/${weatherData.list[i].weather[0].icon}.png`;
         const desc1 = weatherData.list[i].weather[0].description;
 

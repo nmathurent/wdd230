@@ -46,25 +46,25 @@ const days = [
   const dayText = days[today];
   const dayNum = currentDate.getDate();
   const fullYear = currentDate.getFullYear();
-  document.querySelector('#todaydate').textContent = `${dayText}, ${dayNum} ${monthName} ${fullYear}`;
+  // document.querySelector('#todaydate').textContent = `${dayText}, ${dayNum} ${monthName} ${fullYear}`;
 
-  // Begin Top Banner 
-  document.querySelector('#monday-tuesday').textContent = "🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.";
+  // // Begin Top Banner 
+  // // document.querySelector('#monday-tuesday').textContent = "🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.";
 
-  const buttonElement = document.getElementById("bannerbtn");
-  const bannerTop = document.getElementById('meet-banner');
+  // const buttonElement = document.getElementById("bannerbtn");
+  // const bannerTop = document.getElementById('meet-banner');
 
-  buttonElement.addEventListener('click', () => {
-    bannerTop.style.display = "none";
-  });
+  // buttonElement.addEventListener('click', () => {
+  //   bannerTop.style.display = "none";
+  // });
 
-  console.log(today);
-  if (today === 1 || today === 2) {
+  // console.log(today);
+  // if (today === 1 || today === 2) {
     
-     bannerTop.style.display = "block";
-  }
+  //    bannerTop.style.display = "block";
+  // }
 
-    // End Top Banner 
+  //   // End Top Banner 
 
 function toggleMenu() {
     //console.log("It worked!")
