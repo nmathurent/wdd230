@@ -7,7 +7,7 @@ body {
 
 
 .logo {
-    width: 400px;
+    width: 200px;
     width: 50%;
     height: auto; 
 } 
@@ -180,7 +180,7 @@ main section a {
 
 .join {
     color: #fff;
-    background-color: yellowgreen;
+    background-color: #4387f6;
     text-decoration: none;
     /* font-size: 18px; */
     padding: 15px 30px;

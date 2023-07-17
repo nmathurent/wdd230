@@ -69,7 +69,7 @@
     }
 
     .addresssection {
-        padding-left: 20px;
+        padding-left: 160px;
         text-align: left;
     }
     
@@ -94,34 +94,39 @@
     }
 
 
-    .section1 {                                           /* Hero section */
-        grid-column: 1 / 5;
+    .section1 {                                          
+        grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
 
-    .section5 {                                           /* New Releasesection */
-        grid-column: 1 / 5;
+   .section2 {                                           
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .section3 {                                          
+        grid-column: 1 / 3;
         grid-row: 2 / 3;
     }
 
-    .section6 {                                           /* Spotlight section */
-        grid-column: 1 / 5;
-        grid-row: 3 / 4;
-    }
-
-    .section2 {                                           /* Join section */
-        grid-column: 1 / 5;
+    .section4 {                                           
+        grid-column: 1 / 2;
         grid-row: 4 / 5;
     }
 
-    .section3 {                                           /* Event section */
-        grid-column: 1 / 4;
+   .section5 {                                           
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .section6 {                                           
+        grid-column: 1 / 3;
         grid-row: 5 / 6;
     }
 
-    .section4 {                                           /* Weather section */
-        grid-column: 4 / 5;
-        grid-row: 5 / 6;
+    .section7 {                                           
+        grid-column: 1 / 3;
+        grid-row: 6 / 7;
     }
 
     .hover-img {
