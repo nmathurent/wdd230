@@ -32,6 +32,7 @@
     .hsection3 {                                           /* Header photo 2 */
         grid-column: 5 / 6;
         grid-row: 1 / 2;
+        
     }
 
     #hamburguerBtn  {
