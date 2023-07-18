@@ -310,7 +310,7 @@ form label.sbs {
 form input.submitBtn, #benefits {
     border: none;
     /* background-color: #9c2c13; */
-    background-color: yellowgreen;
+    background-color: #4387f6;
     color: white;
     border-radius: 1rem;
     padding: .75rem 1.5rem;
